@@ -11,9 +11,8 @@ class Formatter {
   }
 
   static titleize(string){
-    let arr = string.split(' ')
-    let capital = arr.map(word => {
-      let t = word.toLowerCase()
+    let arr = string.toLowerCase().split(' ')
+    let capital = arr.map(t => {
       if(t != "a" && t != "the" && t != "an" && t != "but" && t != "of" && t != "and" && t != "for" && t != "at" && t != "by" && t != "from"){
         return this.capitalize(t)
       }
@@ -22,5 +21,5 @@ class Formatter {
     let resp = capital.join(' ')
     return this.capitalize(resp)
   }
-
+//test
 }
